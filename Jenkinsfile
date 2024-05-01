@@ -20,7 +20,7 @@ pipeline {
         stage('checkout') {
             steps {
                 git url: 'https://github.com/ramyagaraga/project.git',
-                    branch: 'main'
+                    branch: 'dev'
             }
         }
 
