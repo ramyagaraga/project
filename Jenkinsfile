@@ -26,7 +26,7 @@ pipeline {
     stages {
         stage('checkout') {
             steps {
-                git url: 'https://github.com/ramyagaraga/project.git',,
+                git url: 'https://github.com/ramyagaraga/project.git',
                     branch: 'dev'
             }
         }
@@ -50,7 +50,7 @@ pipeline {
             }
         }
         // Cluster creation
-        stage('Create ECS Cluster') {
+        stage('Create ECS Cluster') { 
             steps {
                 sh "aws ecs create-cluster --cluster-name ${CLUSTER_NAME} --region ${AWS_DEFAULT_REGION}"
             }
